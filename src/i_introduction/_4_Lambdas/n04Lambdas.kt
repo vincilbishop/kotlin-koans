@@ -27,5 +27,5 @@ fun task4(collection: Collection<Int>): Boolean {
     val sum = { x: Int, y: Int -> x + y }
     val square: (Int) -> Int = { x -> x * x }
 
-    return sum(1, square(2)) == 5
+    return sum(collection.toIntArray()[1], square(collection.toIntArray()[0])) == collection.toIntArray()[2]
 }
